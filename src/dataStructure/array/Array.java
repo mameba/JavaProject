@@ -140,7 +140,7 @@ public class Array<E> {
         System.arraycopy(data, index + 1, data, index, size - index);
         size--;
         data[size] = null;
-        if(size == data.length/2) {
+        if(size == data.length/4 && data.length/2 != 0) {
             resize(data.length/2);
         }
         return element;
@@ -170,7 +170,7 @@ public class Array<E> {
      * @return int 元素值
      */
     public E removeLast() {
-        return remove(size);
+        return remove(size - 1);
     }
 
     /**
