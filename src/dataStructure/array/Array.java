@@ -33,8 +33,9 @@ public class Array<E> {
      * @param index 位置  element 元素
      */
     public void add(int index, E element) {
-        if(size == data.length)
-            throw new IllegalArgumentException("add false.array is full.");
+        if(size == data.length) {
+            resize(data.length * 2);
+        }
         if(index < 0 || index > size) {
             throw new IllegalArgumentException("add false.index is illegal.");
         }
@@ -138,6 +139,10 @@ public class Array<E> {
         E element = data[index];
         System.arraycopy(data, index + 1, data, index, size - index);
         size--;
+        data[size] = null;
+        if(size == data.length/2) {
+            resize(data.length/2);
+        }
         return element;
     }
 
@@ -171,6 +176,7 @@ public class Array<E> {
     /**
      * 设置数组指定位置的元素值
      * @param index element
+     * @param index element
      */
     public void set(int index, E element) {
         if(index < 0 || index > size ) {
@@ -190,5 +196,14 @@ public class Array<E> {
         }
         result.append(']');
         return result.toString();
+    }
+
+    /**
+     * 当数组满时进行扩容，扩容为原先容量的两倍
+     */
+    private void resize(int capacity) {
+        E[] newData = (E[])new Object[capacity];
+        System.arraycopy(data, 0, newData, 0, size);
+        data = newData;
     }
 }
