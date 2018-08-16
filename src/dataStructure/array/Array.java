@@ -94,13 +94,29 @@ public class Array<E> {
     /**
      * 返回指定下表的元素
      * @param index 下标
-     * @return int 元素
+     * @return E 元素
      */
     public E get(int index) {
         if (index < 0 || index > size){
             throw new IllegalArgumentException("get failed. index is illegal.");
         }
         return data[index];
+    }
+
+    /**
+     * 返回第一个元素
+     * @return E 元素
+     */
+    public E getFirst() {
+        return get(0);
+    }
+
+    /**
+     * 返回最后一个元素
+     * @return E 元素
+     */
+    public E getLast() {
+        return get(size-1);
     }
 
     /**
