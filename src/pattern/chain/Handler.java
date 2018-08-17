@@ -1,7 +1,8 @@
 package pattern.chain;
 
 /**
- * Created by zhangcy on 2018/8/14.
+ * Created by zhangcy
+ * on 2018/8/14.
  */
 abstract class Handler {
 

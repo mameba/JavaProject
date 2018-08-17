@@ -1,7 +1,8 @@
 package thread;
 
 /**
- * Created by zhangcy on 2018/8/13.
+ * Created by zhangcy
+ * on 2018/8/13.
  */
 public class Main {
     public static void main(String[] args) {

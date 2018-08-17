@@ -1,7 +1,8 @@
 package thread;
 
 /**
- * Created by zhangcy on 2018/8/13.
+ * Created by zhangcy
+ * on 2018/8/13.
  */
 public class RunnableDemo implements Runnable{
 

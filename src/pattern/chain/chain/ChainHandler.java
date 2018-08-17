@@ -1,7 +1,8 @@
 package pattern.chain.chain;
 
 /**
- * Created by zhangcy on 2018/8/14.
+ * Created by zhangcy
+ * on 2018/8/14.
  */
 public abstract class ChainHandler {
 

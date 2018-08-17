@@ -33,8 +33,10 @@ public class Main {
     public static void main(String[] args) {
         ArrayQueue arrayQueue = new ArrayQueue();
         LoopQueue loopQueue = new LoopQueue();
+        LinkedListQueue linkedListQueue = new LinkedListQueue();
         testQueue(arrayQueue, 100000);
         testQueue(loopQueue, 100000);
+        testQueue(linkedListQueue, 100000);
 
     }
 }
