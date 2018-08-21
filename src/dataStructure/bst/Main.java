@@ -12,6 +12,7 @@ public class Main {
         for (int i = 0; i < num.length; i++) {
             bst.add(num[i]);
         }
+        bst.remove(3);
         bst.preOrder();
         System.out.println("");
         bst.preOrderNR();

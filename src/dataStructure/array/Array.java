@@ -222,4 +222,13 @@ public class Array<E> {
         System.arraycopy(data, 0, newData, 0, size);
         data = newData;
     }
+
+    public void swap (int i, int j) {
+
+        if(i < 0 || i >= size || j < 0 || j >= size)
+            throw new IllegalArgumentException("Array swap failed. argument is illegal.");
+        E t = data[i];
+        data[i] = data[j];
+        data[j] = t;
+    }
 }

@@ -1,6 +1,7 @@
 package beike;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -46,8 +47,9 @@ public class Main {
             System.out.println(0);
         }else {
             System.out.println(size);
-            for (int i = 0; i < size; i++) {
-                System.out.print(result.get(i) + " ");
+
+            for (Integer aResult : result) {
+                System.out.print(aResult + " ");
             }
         }
     }
